@@ -1,4 +1,4 @@
-let model = [] // Creo el array model
+export let model = [] // Creo el array model
 
 const pieza_I = [
         [1,1,1,1] // Defino el diseño de las piezas

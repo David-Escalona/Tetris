@@ -1,4 +1,6 @@
 import { home } from "./home.js"
+import { panel } from "../piezas/panel.js";
+import { model } from "../piezas/models.js";
 
 export const juego = {
 	template:
