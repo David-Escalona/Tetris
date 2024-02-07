@@ -65,8 +65,8 @@ export const juego = {
 
 	script: () => {
 		document.querySelector('#volver').addEventListener('click', () =>{
-			document.querySelector('main').innerHTML = home.template;
-			home.script();
+		document.querySelector('main').innerHTML = home.template;
+		home.script();
 		});
 		panel.pintaPanel(); // Llamada al método pintaPanel()
 		console.log(model);

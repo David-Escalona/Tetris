@@ -25,3 +25,4 @@ class ModeloPieza {
         this.altura = this.matriz.length;
     }
 }
+
