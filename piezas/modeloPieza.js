@@ -1,4 +1,4 @@
-class ModeloPieza {
+export class ModeloPieza {
     constructor(modelo, x = 0, y = 0) {
         this.modelo = modelo;
         this.angulo = 0; // Por defecto el ángulo es 0
