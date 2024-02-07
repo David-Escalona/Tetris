@@ -1,6 +1,6 @@
-import { ModeloPieza } from "./modeloPieza.js";
+import { ModeloPieza } from "./modeloPieza.js"; // Importo el archivo ModeloPieza
 
-export const panel = {
+export const panel = { // Exporto una variable constatnte llamada panel
 
     crearNuevaPieza: function() {
         // Obtener un modelo aleatorio
@@ -18,3 +18,4 @@ export const panel = {
         return nuevaPieza;
     }
 };
+

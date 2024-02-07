@@ -1,6 +1,5 @@
 import { home } from "./home.js";
 import { panel } from "../piezas/panel.js";
-import { model } from "../piezas/models.js";
 
 export const juego = {
 	template: `
@@ -69,7 +68,6 @@ export const juego = {
 		home.script();
 		});
 		panel.pintaPanel(); // Llamada al método pintaPanel()
-		console.log(model);
 	}
 };
 
