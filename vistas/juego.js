@@ -1,4 +1,5 @@
 import { panel } from "../piezas/panel.js";
+import { ModeloPieza } from "../funciones/clases.js";
 
 export const juego = {
 	template: `
@@ -60,8 +61,11 @@ export const juego = {
 
 		script:() => {
 	
-			panel.pintaPanel()
-	
+			panel.pintaPanel();
+
+			panel.borrarPieza();
+
+			panel.crearNuevaPieza();
 		}
 	}
 

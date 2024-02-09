@@ -1,4 +1,4 @@
-export const models = [
+export const models = [ // Exporto un array constante llamada models que tendra objetos que representan modelos de piezas
         {
             color: 'bg-secondary',
             nombre: 'O',

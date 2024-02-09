@@ -1,4 +1,4 @@
-import { models } from "./models.js"
+import { models } from "../piezas/models.js"
 
 export class ModeloPieza { // Exporto una clase llamada ModeloPieza
     constructor (modelo = 0, x = 0, y = 0, angulo = 0) { // Esto es un constructor de la clase MP que recibe cuatro parametros, modelo,x,y,angulo tendran el valor 0
