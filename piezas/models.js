@@ -1,32 +1,7 @@
 export const models = [
         {
-            color: 'bg-primary',
-            nombre: 'palo',
-            matriz: [
-                [
-                    [1],
-                    [1],
-                    [1],
-                    [1]
-                ],
-                [
-                    [1, 1, 1, 1]
-                ],
-                [
-                    [1],
-                    [1],
-                    [1],
-                    [1]
-                ],
-                [
-                    [1, 1],
-                    [1, 1]
-                ]
-            ]
-        },
-        {
             color: 'bg-secondary',
-            nombre: 'cuadrado',
+            nombre: 'O',
             matriz: [
                 [
                     [1, 1],
@@ -71,26 +46,27 @@ export const models = [
             ]
         },
         {
-            color: 'bg-danger',
-            nombre: 'L invertida',
+            color: 'bg-primary',
+            nombre: 'I',
             matriz: [
                 [
-                    [0, 1],
-                    [0, 1],
+                    [1],
+                    [1],
+                    [1],
+                    [1]
+                ],
+                [
+                    [1, 1, 1, 1]
+                ],
+                [
+                    [1],
+                    [1],
+                    [1],
+                    [1]
+                ],
+                [
+                    [1, 1],
                     [1, 1]
-                ],
-                [
-                    [1, 0, 0],
-                    [1, 1, 1]
-                ],
-                [
-                    [1, 0],
-                    [1, 0],
-                    [1, 1]
-                ],
-                [
-                    [1, 1, 1],
-                    [1, 0, 0]
                 ]
             ]
         },
@@ -165,5 +141,29 @@ export const models = [
                     [0, 1]
                 ]
             ]
-        }
+        },
+        {
+            color: 'bg-danger',
+            nombre: 'L invertida',
+            matriz: [
+                [
+                    [0, 1],
+                    [0, 1],
+                    [1, 1]
+                ],
+                [
+                    [1, 0, 0],
+                    [1, 1, 1]
+                ],
+                [
+                    [1, 0],
+                    [1, 0],
+                    [1, 1]
+                ],
+                [
+                    [1, 1, 1],
+                    [1, 0, 0]
+                ]
+            ]
+        },
     ];

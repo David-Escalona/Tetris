@@ -1,4 +1,3 @@
-import { home } from "./home.js";
 import { panel } from "../piezas/panel.js";
 
 export const juego = {
@@ -55,19 +54,14 @@ export const juego = {
 						<div class="fila d-flex justify-content-center">
 						</div>
 					</div>
-					<div>
-						<button id="volver" class="btn btn-success fs-1 mt-5 volver">VOLVER</button>
-					</div>
 				</div>
 		</div>
 		`,
 
-	script: () => {
-		document.querySelector('#volver').addEventListener('click', () =>{
-		document.querySelector('main').innerHTML = home.template;
-		home.script();
-		});
-		panel.pintaPanel(); // Llamada al método pintaPanel()
+		script:() => {
+	
+			panel.pintaPanel()
+	
+		}
 	}
-};
 
