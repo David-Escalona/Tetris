@@ -59,13 +59,19 @@ export const juego = {
 		</div>
 		`,
 
-		script:() => {
-	
-			panel.pintaPanel();
+		script:()=>{
+    
+			panel.crearNuevaPieza(); // LLamo a esta funcion
 
-			panel.borrarPieza();
+    		panel.insertarPieza(); // LLamo a esta funcion
 
-			panel.crearNuevaPieza();
-		}
+    		panel.pintaPanel(); // LLamo a esta funcion
+
+    		panel.controlTeclas(); // LLamo a esta funcion
+
+    		panel.iniciarMovimiento(); // LLamo a esta funcion
+
 	}
+	
+}
 

@@ -25,8 +25,8 @@ export const panel = { // Exporto un objeto constante llamado panel
         [1,0,0,0,0,0,0,0,0,0,0,1],
         [1,0,0,0,0,0,0,0,0,0,0,1],
         [1,1,1,1,1,1,1,1,1,1,1,1]
-    ]
-    ,
+    ],
+
     pintaPanel: () => { // Esto es una funcion que se encarga de pintar el modelo
         let html = '' // Se inicializa una cadena de texto html vacia
 
@@ -67,7 +67,7 @@ export const panel = { // Exporto un objeto constante llamado panel
         
         const anchura = models[modelo].matriz[0].length; // Creo un valor aleatorio llamado anchura que recibe una anchura aleatoriamente
         
-        let aleatorio; // Creo una nueva variable llamada aleatorio
+        let anchuraAleatorio; // Creo una nueva variable llamada aleatorio
         switch (anchura) { // Utilizo un switch para determinar las posiciones aleatorias y le paso un valor anchura
           case 1: // En el caso 1
             anchuraAleatorio = Math.floor(Math.random() * 10); // El valor anchuraAleatorio recibira un numero aleatorio entre el 0 y 9
@@ -91,4 +91,68 @@ export const panel = { // Exporto un objeto constante llamado panel
        
       },
 
-}
+      insertarPieza: () => { // Esto es una funcion que se encarga de insertarPieza
+
+        let i; // Creo las variable i 
+        let x; // Creo las variable x
+
+        for(i=0; i<panel.nuevaPieza.altura; i++){ // Esto es un bucle que inica mientras i sea igual a 0 y continua mientras i sea menor a la altura de nueva pieza
+          for(x=0; x<panel.nuevaPieza.longitud; x++){ // Esto es un bucle que inica mientras x sea igual a 0 y continua mientras x sea menor a la altura de nueva pieza
+            const elemento = panel.nuevaPieza.matriz[i][x]; // Se crea una variable llamada elemento que guardara la posicion de i,x
+            if(elemento){ // Si elemento existe
+              panel.matriz[i + panel.nuevaPieza.y][x + panel.nuevaPieza.x] = elemento; // Si la celda no esta vacia se asignara su valor a la matriz i,x
+            }
+          }
+        }
+        
+        panel.pintaPanel(); // Lamo a la funcion pintaPanel.
+      },
+
+      iniciarMovimiento: () => { // Esto es una funcion que se encarga de iniciarMovimiento
+        setInterval(panel.bajar, 1000); // setInterval llama a panel.bajar cada 1.000 milisegundos
+    },
+
+    controlTeclas: () => { // Esto es una funcion que se encarga de controlarTeclas
+        document.addEventListener('keydown', (event) => { // Añado un evento escucha a keydown lo que significa que se tiene en cuentas las teclas seleccionadas
+            switch(event.key) { // En funcion de la tecla seleccionada hara un caso u otro
+                case 'ArrowRight': // Caso Derecha
+                    panel.moverDra(); // Mueve la pieza a la derecha
+                    break; // Si se cumple se sale del switch
+                case 'ArrowLeft': // Caso Derecha
+                    panel.moverIzq(); // Mueve la pieza a la izquierda
+                    break; // Si se cumple se sale del switch
+                case 'ArrowDown': // Caso Abajo
+                    panel.bajar(); // Mueve la pieza para abajo
+                    break; // Si se cumple se sale del switch
+                case 'ArrowUp': // Caso Arriba
+                    panel.girar(); // Se gira la pieza
+                    break; // Si se cumple se sale del switch
+            }
+        });
+    },
+
+    moverDra: () => { // Esto es una funcion que se encarga de mover la pieza a derecha
+        panel.borrarPieza(); // LLamo a esta funcion
+        panel.nuevaPieza.x++; // LLamo a esta funcion para desplazar la pieza 1 posicion a la derecha
+        panel.insertarPieza(); // LLamo a esta funcion
+        panel.pintaPanel(); // LLamo a esta funcion
+    },
+
+    moverIzq: () => { // Esto es una funcion que se encarga de mover la pieza a izquierda
+        panel.borrarPieza(); // LLamo a esta funcion
+        panel.nuevaPieza.x--; // LLamo a esta funcion para desplazar la pieza 1 posicion a la izquierda
+        panel.insertarPieza(); // LLamo a esta funcion
+        panel.pintaPanel(); // LLamo a esta funcion
+    },
+
+    bajar: () => { // Esto es una funcion que se encarga de bajar las piezas
+        panel.borrarPieza(); // LLamo a esta funcion
+        panel.nuevaPieza.y++; // LLamo a esta funcion para desplazar la pieza 1 posicion abajo
+        panel.insertarPieza(); // LLamo a esta funcion
+        panel.pintaPanel(); // LLamo a esta funcion
+    },
+
+    girar: () => { // Esto es una funcion que se encarga de girar piezas
+        panel.nuevaPieza.girar(); // LLamo a esta funcion para girar la pieza
+    }
+};

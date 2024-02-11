@@ -1,6 +1,5 @@
 export const models = [ // Exporto un array constante llamada models que tendra objetos que representan modelos de piezas
         {
-            color: 'bg-secondary',
             nombre: 'O',
             matriz: [
                 [
@@ -22,7 +21,6 @@ export const models = [ // Exporto un array constante llamada models que tendra 
             ]
         },
         {
-            color: 'bg-success',
             nombre: 'L',
             matriz: [
                 [
@@ -46,7 +44,6 @@ export const models = [ // Exporto un array constante llamada models que tendra 
             ]
         },
         {
-            color: 'bg-primary',
             nombre: 'I',
             matriz: [
                 [
@@ -71,7 +68,6 @@ export const models = [ // Exporto un array constante llamada models que tendra 
             ]
         },
         {
-            color: 'bg-warning',
             nombre: 'T',
             matriz: [
                 [
@@ -95,7 +91,6 @@ export const models = [ // Exporto un array constante llamada models que tendra 
             ]
         },
         {
-            color: 'bg-info',
             nombre: 'Z',
             matriz: [
                 [
@@ -119,7 +114,6 @@ export const models = [ // Exporto un array constante llamada models que tendra 
             ]
         },
         {
-            color: 'bg-dark',
             nombre: 'Z invertida',
             matriz: [
                 [
@@ -143,7 +137,6 @@ export const models = [ // Exporto un array constante llamada models que tendra 
             ]
         },
         {
-            color: 'bg-danger',
             nombre: 'L invertida',
             matriz: [
                 [
